@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crypto Analysis</title>
+</head>
+<body>
+    <h1>Cryptocurrency Comparative Analysis</h1>
+    <form method="post">
+        <input type="text" name="crypto_ids" placeholder="Enter cryptocurrency IDs (e.g., bitcoin, ethereum)" value="{{ crypto_ids }}">
+        <button type="submit">Analyze</button>
+    </form>
+    {% if plot_url %}
+        <img src="data:image/png;base64,{{ plot_url }}" alt="Cryptocurrency comparative analysis">
+    {% endif %}
+    {% if error_message %}
+        <p>{{ error_message }}</p>
+    {% endif %}
+</body>
+</html>
